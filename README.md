@@ -98,3 +98,19 @@ enum Option<T> {
     None
 }
 ```
+
+## Documentation
+
+Using 3 slashes to comment will generate a documentation for the program along with these comments.
+
+```rust
+/// Example
+fn hello(){
+}
+```
+
+To generate documentation, use the following cargo command
+
+```cargo
+cargo doc
+```

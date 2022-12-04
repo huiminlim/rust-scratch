@@ -41,20 +41,35 @@ Rust uses a memory "ownership" model, where the owner of the memory is in charge
 The memory can be moved or borrowed.
 
 ```rust
-    // Moving memory
-    enum Light {
-        Bright,
-        Dull,
-    }
-    fn do_something(light: Light) {
-        // Owner of the "light"/"dull" variable is now fn do_something()
-        match light {
-            Light::Bright => println!("Bright"),
-            Light::Dull => println!("Dull"),
-        };
-        // Deletes the light variable from main() function
-    }
-    let dull = Light::Dull;
-    do_something(dull); // moves the variable in, and deletes after fn
-    do_something(dull); // WARNING: not allowed! Compiler complaints
+// Moving memory
+enum Light {
+    Bright,
+    Dull,
+}
+fn do_something(light: Light) {
+    // Owner of the "light"/"dull" variable is now fn do_something()
+    match light {
+        Light::Bright => println!("Bright"),
+        Light::Dull => println!("Dull"),
+    };
+    // Deletes the light variable from main() function
+}
+let dull = Light::Dull;
+do_something(dull); // moves the variable in, and deletes after fn
+do_something(dull); // WARNING: not allowed! Compiler complaints
+```
+
+To pass in a borrowed variable, use the `&` syntax.
+
+```rust
+fn do_something(light: &Light) {
+    // Owner of the "light"/"dull" variable is still the main()
+    match light {
+        Light::Bright => println!("Bright"),
+        Light::Dull => println!("Dull"),
+    };
+    // Deletes the light variable from main() function
+}
+do_something(&dull); // moves the variable in, and deletes after fn
+do_something(&dull); // Legal
 ```

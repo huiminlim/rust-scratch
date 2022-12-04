@@ -110,4 +110,16 @@ fn main() {
                         // do_something(dull); // not allowed!
     let bright = Light::Bright;
     do_something(bright);
+
+    let dull2 = Light::Dull;
+    fn do_something2(light: &Light) {
+        // Owner of the "light"/"dull" variable is still the main()
+        match light {
+            Light::Bright => println!("Bright"),
+            Light::Dull => println!("Dull"),
+        };
+        // Deletes the light variable from main() function
+    }
+    do_something2(&dull2); // moves the variable in, and deletes after fn
+    do_something2(&dull2); // Legal
 }

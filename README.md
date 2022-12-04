@@ -114,3 +114,19 @@ To generate documentation, use the following cargo command
 ```cargo
 cargo doc
 ```
+
+## Result
+
+A data type that contains one of two types of data:
+
+- Successful
+- Error
+
+This is the definition of the `Result` type.
+
+```rust
+enum Result<T, E> {
+    Ok(T),
+    Err(E)
+}
+```

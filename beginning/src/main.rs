@@ -61,4 +61,17 @@ fn main() {
         Direction::Right => println!("Right"),
         // Direction::Up => println!("Up"),
     }
+
+    // Struct syntax
+    struct ShippingBox {
+        depth: i32,
+        width: i32,
+        height: i32,
+    }
+    let my_box = ShippingBox {
+        depth: 3,
+        width: 2,
+        height: 10,
+    };
+    println!("{} {} {}", my_box.height, my_box.width, my_box.depth);
 }

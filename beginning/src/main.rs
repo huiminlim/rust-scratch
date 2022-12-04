@@ -93,4 +93,21 @@ fn main() {
         _ => "Nothing",
     };
     println!("{}", message);
+
+    // Moving memory
+    enum Light {
+        Bright,
+        Dull,
+    }
+    fn do_something(light: Light) {
+        match light {
+            Light::Bright => println!("Bright"),
+            Light::Dull => println!("Dull"),
+        };
+    }
+    let dull = Light::Dull;
+    do_something(dull); // moves the variable in, and deletes after fn
+                        // do_something(dull); // not allowed!
+    let bright = Light::Bright;
+    do_something(bright);
 }

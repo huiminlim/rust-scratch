@@ -6,8 +6,13 @@ struct Temperature {
 
 // Collection of functions that belong to a struct
 impl Temperature {
-    fn show_temp(temp: Temperature) {
-        println!("{} degrees F", temp.degrees_f)
+    // fn show_temp(temp: Temperature) {
+    //     println!("{} degrees F", temp.degrees_f)
+    // }
+
+    // Use self to refer to struct as a shorthand
+    fn show_temp(&self) {
+        println!("{} degrees F", self.degrees_f)
     }
 }
 

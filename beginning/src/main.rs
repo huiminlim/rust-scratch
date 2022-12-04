@@ -15,4 +15,11 @@ fn main() {
         true => println!("True"),
         false => println!("False"),
     };
+
+    let some_int = 3;
+    match some_int {
+        1 => println!("1"),
+        2 => println!("2"),
+        _ => println!("Others"), // Everything default case
+    };
 }

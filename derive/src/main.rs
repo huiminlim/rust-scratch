@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 // Derive debug printing functionality
 #[derive(Debug, Clone, Copy)] // Ownership of object is not changed, as clone/copy is used
 enum Position {
@@ -5,6 +6,7 @@ enum Position {
     Supervisor,
     Worker,
 }
+#[allow(dead_code)]
 #[derive(Debug, Clone, Copy)] // Ownership of object is not changed, as clone/copy is used
 struct Employee {
     position: Position,

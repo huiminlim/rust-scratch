@@ -39,4 +39,26 @@ fn main() {
         println!("While loop! - {} ", value);
         value += 1;
     }
+
+    // Enums
+    enum Direction {
+        // Up,
+        // Down,
+        Left,
+        Right,
+    }
+    let mut direction = Direction::Left;
+    // Syntax to check for enum equality
+    if matches!(direction, Direction::Left) {
+        println!("First check");
+    }
+    // direction = Direction::Up; // Appease deadcode warning
+    // direction = Direction::Down; // Appease deadcode warning
+    direction = Direction::Right; // Appease deadcode warning
+    match direction {
+        Direction::Left => println!("Left"),
+        // Direction::Down => println!("Down"),
+        Direction::Right => println!("Right"),
+        // Direction::Up => println!("Up"),
+    }
 }

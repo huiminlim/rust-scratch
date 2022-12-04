@@ -86,3 +86,15 @@ There are 2 types of strings used
 To store in a `struct`, the `String` must be owned.
 
 And `&str` must be used to pass to a function.
+
+## Option
+
+The option type represents some type with data that might not exist yet.
+
+```rust
+// Definition
+enum Option<T> {
+    Some(T),
+    None
+}
+```

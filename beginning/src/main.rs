@@ -22,4 +22,14 @@ fn main() {
         2 => println!("2"),
         _ => println!("Others"), // Everything default case
     };
+
+    // Loop syntax
+    let mut counter = 0; // to change value of variable, use `mut` keyword
+    loop {
+        counter += 1;
+        println!("Hello! - {} ", counter);
+        if counter == 6 {
+            break;
+        }
+    }
 }

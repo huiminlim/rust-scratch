@@ -74,4 +74,14 @@ fn main() {
         height: 10,
     };
     println!("{} {} {}", my_box.height, my_box.width, my_box.depth);
+
+    // Tuples syntax
+    fn one_two_three() -> (i32, i32, i32) {
+        (1, 2, 3)
+    }
+    let tup = one_two_three();
+    println!("{} {} {}", tup.0, tup.1, tup.2); // The numbers are index in tuple
+
+    let (val1, val2, val3) = (1, "hello", 2.33); // naming the tuple elements
+    println!("{} {} {}", val1, val2, val3);
 }

@@ -75,3 +75,14 @@ fn do_something(light: &Light) {
 do_something(&dull); // moves the variable in, and deletes after fn
 do_something(&dull); // Legal
 ```
+
+## Strings
+
+There are 2 types of strings used
+
+- `String` are owned strings.
+- `&str` are borrowed `String` slices.
+
+To store in a `struct`, the `String` must be owned.
+
+And `&str` must be used to pass to a function.

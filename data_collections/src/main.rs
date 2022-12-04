@@ -14,11 +14,18 @@ impl Temperature {
     fn show_temp(&self) {
         println!("{} degrees F", self.degrees_f)
     }
+
+    // Returning self as an object
+    fn freezing() -> Self {
+        Self { degrees_f: 2.2 }
+    }
 }
 
 fn main() {
-    let hot = Temperature { degrees_f: 99.9 };
-
     // Call the functions that struct owns
-    Temperature::show_temp(hot);
+    let hot = Temperature { degrees_f: 99.9 };
+    hot.show_temp();
+
+    let cold = Temperature::freezing();
+    cold.show_temp();
 }

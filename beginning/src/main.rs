@@ -8,4 +8,11 @@ fn main() {
     let value = sub(10, 2);
 
     println!("Hello, {} {}", sum, value);
+
+    // Match is similar to switch
+    let some_bool = true;
+    match some_bool {
+        true => println!("True"),
+        false => println!("False"),
+    };
 }

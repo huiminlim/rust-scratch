@@ -40,6 +40,8 @@ Rust uses a memory "ownership" model, where the owner of the memory is in charge
 
 The memory can be moved or borrowed.
 
+The owner of a memory must clean up the memory and the owner is determined by the compiler using move or borrow.
+
 ```rust
 // Moving memory
 enum Light {

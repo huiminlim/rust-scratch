@@ -84,4 +84,13 @@ fn main() {
 
     let (val1, val2, val3) = (1, "hello", 2.33); // naming the tuple elements
     println!("{} {} {}", val1, val2, val3);
+
+    // Expressions evaluation in variables
+    let my_num = 2;
+    let message = match my_num {
+        1 => "Hello",
+        2 => "Bye",
+        _ => "Nothing",
+    };
+    println!("{}", message);
 }

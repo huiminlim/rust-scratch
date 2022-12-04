@@ -32,4 +32,11 @@ fn main() {
             break;
         }
     }
+
+    // While loop syntax
+    let mut value = 0;
+    while value < 12 {
+        println!("While loop! - {} ", value);
+        value += 1;
+    }
 }

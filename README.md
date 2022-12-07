@@ -130,3 +130,17 @@ enum Result<T, E> {
     Err(E)
 }
 ```
+
+## Closures
+
+Closures are functions that can be defined in another function.
+
+The closures are shorthand notations. It is similar to a lambda and can be anonymous.
+
+```rust
+// CLosures
+let add = |a: i32, b: i32| -> i32 { a + b };
+let sum = add(1, 2);
+
+//let add = |a, b| a + b ;
+```
